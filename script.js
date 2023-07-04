@@ -80,7 +80,7 @@ function Pincodes(timezone, pin) {
                 <h3>Time Zone: ${timezone}</h3>
                 <h3>Date And Time: ${getTime(timezone)}</h3>
                 <h3>Pincode: ${pin}</h3>
-                <h3>Number of pincode(s) found:${pincodeCount}</h3>
+                <h3>Message: Number of pincode(s) found:${pincodeCount}</h3>
         `;
 
         timeZone.innerHTML=time;
@@ -112,7 +112,17 @@ function getPostDetails(pinCode){
 }
 
 function filterData(){
-    let search=document.getElementById("search").value;
+    let search=document.getElementById("search").value.toUpperCase();
+    const listItems=document.getElementsByClassName("postOffice");
 
+    for(let i=0;i<listItems.length;i++){
+        const ele=listItems[i];
+        const text = ele.textContent || ele.innerText;
+        if (text.toUpperCase().indexOf(search) > -1) {
+            ele.style.display = "";
+        }else {
+            ele.style.display = "none";
+        }
+    }
 }
 
