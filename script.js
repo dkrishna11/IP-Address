@@ -44,7 +44,7 @@ function diplayData(api){
         <h3>Organization: ${api.org}</h3>  
         <h3>Long: ${coordinates[1]} </h3>  
         <h3>Region: ${api.region} </h3>  
-        <h3>Hostname: ${api.timezone} </h3>  
+        <h3>Hostname: ${location.hostname} </h3>  
     `;
     locationDetails.innerHTML=innerDetails;
 
