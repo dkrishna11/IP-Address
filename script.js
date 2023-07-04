@@ -4,7 +4,6 @@ let map=document.getElementsByClassName("map")[0];
 let timeZone=document.getElementsByClassName("timeZone")[0];
 let postDetails=document.getElementsByClassName("postDetails")[0]
 
-const mapKey="AIzaSyCgYRbd2xE4gmn-6JKgnyA-CUaTLMUzIfI";
 
 // function to get IP Address:
 
