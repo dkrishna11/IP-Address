@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoLocation Area</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="location">
+        <h2 id="displayIpAddress"></h2>
+        <button onclick="ipaddress()" id="submit">Get Data</button>
+    </div>
+
+    <div id="display-user-data">
+        <div class="location-details"></div>
+        <div class="map"></div>
+        <div class="timeZone"></div>
+        <div class="pinCodeDetails">
+            <input type="search" name="" id="search" oninput="filterData()" placeholder="Filter">
+            <div class="postDetails"></div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
