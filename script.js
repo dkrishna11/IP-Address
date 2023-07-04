@@ -26,7 +26,7 @@ function ipaddress(){
 
 async function fetchApi(IP){
     try{
-        let response=await fetch(`https://ipinfo.io/${IP}?token=b4e22ce5c7422c`);
+        let response=await fetch(`https://ipinfo.io/${IP}?token=12c2aa0142d5ea`);
         let results=await response.json();
         diplayData(results);
     }
@@ -41,7 +41,7 @@ function diplayData(api){
     let innerDetails=`
         <h3>Lat: ${coordinates[0]}</h3>  
         <h3>City: ${api.city} </h3>  
-        <h3>Organization: ${api.asn.asn+" "+api.asn.name}</h3>  
+        <h3>Organization: ${api.org}</h3>  
         <h3>Long: ${coordinates[1]} </h3>  
         <h3>Region: ${api.region} </h3>  
         <h3>Hostname: ${api.timezone} </h3>  
